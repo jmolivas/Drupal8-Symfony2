@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="resources/images/icon@2x.png"/>
+	<link rel="apple-touch-startup-image" href="resources/images/splash.png" />
+	<title>Drupal8 y Symfony2</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bitter:400&amp;subset=latin" media="all" />
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+	<link rel="stylesheet" href="kinout/stylesheets/css/reset.css">
+	<link rel="stylesheet" href="kinout/stylesheets/css/layout.css">
+	<link rel="stylesheet" href="kinout/stylesheets/css/widgets.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+	<div class="kinout">
+		<section>
+			<h1>Drupal8 y Symfony2</h1>
+		</section>
+		<section>
+			<p>
+				<br/>
+				<h2>Drupal8 y Symfony2</h2>
+			</p>
+			<br/>
+			<h4>DrupalCamp Costa Rica 2012</h4>
+		</section>
+
+		<section>
+			<h2>Acerca de mí</h2>
+			<article>
+				<p class="vertical">
+					<img src="assets/images/real-me-blog.jpg" class="bordered size_256 center center image-shadow">
+				</p>
+				<p class="vertical">Mi nombre es Jesús Manuel Olivas</p>
+				<p class="vertical">Me pueden encontrar en twitter como <strong>@jmolivas</strong><br/>
+				En mi blog http://jmolivas.com</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>Algo más...</h2>
+			<article>
+				<p class="vertical">Relativamente nuevo en Drupal desde principios de 2010 trabajando con este framework.</p>
+				<p class="vertical">Tengo ese mismo tiempo programando con PHP y con symfony2 en fechas recientes.</p>
+				<p class="vertical">Próximamente :</p>
+				<p class="vertical">@hechoendrupal  <br/> http://hechoendrupal.com</p>
+			</article>
+		</section>	
+
+		<section>
+			<h2>Antes de empezar</h2>
+			<article>
+				<br/><br/>
+				<ul>
+					<li class="left ">Cuántos de ustedes se consideran programadores de PHP ?<br/><br/></li>
+					<li class="left ">Cuántos de ustedes conocen o han escuchado algo de Symfony 2 ?<br/><br/></li>
+					<li class="left ">Cuántos de ustedes conocen o han escuchado el término "The Drupal Way" ?<br/><br/></li>
+				</ul>					
+			</article>
+		</section>	
+
+		<section>
+			<h2>The Drupal way</h2>
+			<article>
+				<br/>
+				<ul>
+					<li class="left ">Entender el paradigma de el sistema de "hooks" y el patrón de diseño propio de Drupal para resolver problmemas.<br/><br/></li>
+					<li class="left ">El recurrente síndrome de NIH (Not Invented Here / No inventado Aquí)<br/><br/><br/></li>
+				</ul>
+				<p class="vertical">Los que hemos trabajado con Drupal conocemos que la curva de aprendizaje de Drupal es muy elevada.</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>La curva de aprendizaje</h2>
+			<article>
+				<p class="vertical">
+					<img src="assets/images/learning-curve.jpg" class="center image-shadow">
+				</a>
+			</article>
+		</section>
+
+		<section>
+			<h2>Cuál es el inconveniente de esto.</h2>
+			<article>
+				<p class="vertical">
+					Toma mucho tiempo ser productivo en Drupal ya que tiene una manera muy particular de resolver los problemas, esto conocido como "The Drupal Way" 
+				</p>
+				<p class="vertical">
+					Y todo este conocimiento adquirido solo es válido y útil en el entorno de Drupal.
+				</p>
+				<p class="vertical">
+					En ocaciones el modo de Drupal no esta apegado a los estandares del mercado, no toma ventaja de nuevas buenas prácticas y hace más complicada la implementación de nuevas tecnologias.
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>El síndrome NIH</h2>
+			<article>
+				<p class="left">Término usado para describir el comportamiento o la aversión que evita el uso de proyectos ya existentes a causa de sus orígenes externos.<br/><br/></p>
+				<ul>
+					<li class="left ">Re-creación de las características existentes del lenguaje PHP.<br/><br/></li>
+					<li class="left ">Re-creación de código y funcionalidad de otros proyectos de código abierto establecidos.<br/><br/></li>		
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<h2>Inconvenientes de el síndrome NIH</h2>
+			<article>
+				<br/>
+				<ul>
+					<li class="left ">Tiempo de implementación al re-escribir código por no reutilizar, extender ó implementar funcionalidad existente.<br/><br/></li>
+					<li class="left ">Perdida de compatibilidad.<br/><br/></li>
+					<li class="left ">Compromiso de mantenimiento.<br/><br/></li>
+					<li class="left ">Los conceptos son portables el codigo no.<br/><br/></li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<h2>Brinda el NIH algun beneficio ?</h2>
+			<article>
+				<br/>
+				<ul>
+					<li class="left ">El proyecto toma una dirección diferente.<br/><br/></li>
+					<li class="left ">El proyecto utilizado se vuelve obsoleto o es abandonado y aparece algún problema de seguridad.<br/><br/></li>
+
+				</ul>
+			</article>
+		</section>	
+
+		<section>
+			<h2>Algunos ejemplos de NIH en Drupal</h2>
+			<article>
+				<br/>
+				<ul>
+					<li class="left ">Sistema de hooks (basado en observer/mediator).<br/><br/></li>
+					<li class="left ">XML-RPC (librería original IXR).<br/><br/></li>
+					<li class="left ">Simple test.<br/><br/></li>
+					<li class="left ">INFO files.<br/><br/></li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<h2>Qué es lo que otros proyectos estan haciendo ?</h2>
+			<article>
+				<p class="vertical">
+					Construyendo aplicaciones bajo patrones ampiamente probados y establecidos como POO (Programación Orientada a Objetos)
+				</p>
+				<p class="vertical">
+					Aprovechando las nuevas características del lenguaje PHP y mejoras de rendimiento.
+				</p>
+				<p class="vertical">
+					Compartiendo codigo (entre diferentes proyectos)
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>Entons podríamos decir que Drupal esta mal ?</h2>
+			<article>
+				<p class="vertical">
+					<h2>NO</h2>
+				</p>
+				<p class="vertical">
+					Por que se beneficia haciendo las cosas diferentes independientemente de las posibles desventajas.
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>Si Drupal no esta mal por que cambiar ?</h2>
+			<article>
+				<p class="left">
+					"La complejidad del código personalizado que se utiliza y la arquitectura no estándar se combinan para crear una barrera de entrada para los nuevos desarrolladores de Drupal. (tanto a los desarrolladores experimentados y novatos por igual)."<br/><br/>
+					buytaert.net
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>Si Drupal quiere cumplir los objetivos que se proponen para Drupal 8</h2>
+			<article>
+				<ul>
+					<li class="left ">Un core robusto, escalable y facilmente extendible.<br/><br/></li>
+					<li class="left ">Un framework moderno<br/><br/></li>
+					<li class="left ">Pensado en móvil<br/><br/></li>
+					<li class="left ">Una gran experiencia móvil para edición de contenidos.<br/><br/></li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<h2>La iniciativa WSCCI </h2>
+			<article>
+				<p class="vertical">
+				 	 La iniciativa WSCC - Web Services and Context Core Initiative  propone la utilización de algunos componentes del Framework Symfony 2 originalmente se mencionó HttpFoundation y ClassLoader.<br/><br/>
+				</p>
+				<a href="http://groups.drupal.org/wscci">WSCCI</a>
+			</article>
+		</section>
+
+		<section>
+			<h2>Que es Symfony ?</h2>
+			<article>
+				<p class="vertical">
+					<!--
+					<iframe width="640" height="360" src="http://www.youtube.com/embed/ywUHDT5Xos0" frameborder="0" allowfullscreen></iframe>
+				-->
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<h2>Entonces Symfony es:</h2>
+			<article>
+				<ul>
+					<li class="left ">Un conjunto de clases Orientadas a Objetos compatibles con PHP 5.3 y versiones posteriores.</li>
+					<li class="left ">un conjunto de componentes reutilizables de manera independiente y cohesionada que solucionan problemas comunes de desarrollo web.</li>
+					<li class="left ">Es un framework de desarrollo en PHP</li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<h2>...</h2>
+			<article>
+		 		Pensemos en Symfony como una caja de legos esas que teniamos cuando niños con ellos podiamos construir cualquier casi cosa uniendo las diferentes piezas.<br/><br/>
+		 		Recordemos que no todas las piezas eran iguales algunas tenian funcionalidades especificas como esos podrían ser los diferentes modulos en Symfony llamados Bundles.
+		 	</article>
+		</section>		
+
+		<section>
+			<h2>Y como obtengo las fuentes ?</h2>
+			<article>
+				<div class="small box">
+					Sitio oficial Framework<br/>
+        			<a href="http://symfony.com/">http://symfony.com</a><br/>
+					Repositorio oficial<br/>
+					<a href="https://github.com/symfony/symfony">https://github.com/symfony/symfony</a>
+				</div>
+				<br/><br/>
+				<div class="small box">
+					Sitio oficial Componentes<br/>
+        			<a href="http://symfony.com/components">http://symfony.com/components</a><br/>
+					Sitio oficial Framework<br/>
+					<a href="https://github.com/symfony/XXXX">https://github.com/symfony/XXXX</a>
+				</div>
+			</article>
+		</section>
+
+		<section>
+			<h2>¿Qué proyectos de código abierto están utilizando componentes de Symfony?</h2>
+			<article>
+				<p class="left">
+		 			<h3 class="left">Herramientas de Desarrollo</h3>
+		 		</p>
+				<ul>
+					<li class="left small">Behat - a BDD (Behavior Driven Development) framework Console, DependencyInjection, EventDispatcher, Finder, Yaml, Config, Translation.</li>
+					<li class="left small">Doctrine - ORM (Object Relational Mapper): Console, Yaml.</li>
+					<li class="left small">Propel - ORM  (Object Relational Mapper): Console, ClassLoader, Yaml.</li>
+					<li class="left small">PHPUnit - PHP Framework para realizar unit testing: Yaml, (Finder soon?).</li>
+					<li class="left small">Jackalope - a content repository (JCR 170/283) ClassLoader, Console</li>
+
+				</ul>
+		 	</article>
+		</section>
+
+		<section>
+			<h2>¿Qué proyectos de código abierto están utilizando componentes de Symfony?</h2>
+			<article>
+				<p class="left">
+		 			<h3 class="left">Frameworks</h3>
+		 		</p>
+				<ul>
+					<li class="left small">Silex - Micro-framework BrowerKit, CssSelector, DomCrawler, EventDispatcher, HttpFoundation, HttpKernel, Routing, Form, Translation, Validator.</li>
+					<li class="left small">PPI 2 - Framework ClassLoader, HttpFoundation, Routing, Templating</li>
+				</ul>
+		 	</article>
+		</section>
+
+		<section>
+			<h2>¿Qué proyectos de código abierto están utilizando componentes de Symfony?</h2>
+			<article>
+				<p class="left">
+		 			<h3 class="left">Productos</h3>
+		 		</p>
+				<ul>
+					<li class="left small">Easybook - Plataforma para publicación de libros: ClassLoader, Console, EventDispatcher, Filesystem, Finder, Yaml</li>
+					<li class="left small">Midgard CMS: Full-stack framework</li>
+					<li class="left small">Zikula - antes PostNuke - Framework HttpFoundation, HttpKernel, EventDispatcher, ClassLoader, DependencyInjection</li>
+					<li class="left small">phpBB - Foro: EventDispatcher, and most of them for version 4?</li>
+				</ul>
+		 	</article>
+		</section> 
+
+		<section>
+			<h2>Que componentes utilizará Drupal 8?</h2>
+			<article>				
+				<ul>
+					<li class="left">ClassLoader</li>
+					<li class="left ">HttpFoundation</li>
+					<li class="left ">HttpKernel</li>
+					<li class="left ">Routing</li>
+					<li class="left ">EventDispatcher</li>
+					<li class="left ">DependencyInjection</li>
+				</ul>
+		 	</article>
+		</section>
+
+		<section>
+			<h2>ClassLoader</h2>
+			<article>				
+				<p class="vertical">
+					El componente ClassLoader se usa para cargar automáticamente archivos que respetan tanto los estándares de interoperabilidad técnica de los "Name Spaces" de PHP 5.3 como la convención de nomenclatura de las clases PEAR.
+				</p>
+		 	</article>
+		</section>
+
+		<section>
+			<h2>HttpFoundation</h2>
+			<article>				
+				<p class="left small">
+					Proporciona los principales objetos necesarios para hacer frente a HTTP. Es una abstracción orientada a objetos de algunas funciones y variables nativas de PHP:<br/>
+				<ul>
+					<li class="left small">La clase Symfony\Component\HttpFoundation\Request resume las principales variables globales de PHP como $_GET, $_POST, $_COOKIE, $_FILES y $_SERVER.</li>
+					<li class="left small">La clase Symfony\Component\HttpFoundation\Response resume algunas funciones PHP como header(), setcookie() y echo.</li>
+					<li class="left small">La clase Symfony\Component\HttpFoundation\Session y la interfaz Symfony\Component\HttpFoundation\SessionStorage\SessionStorageInterface, resumen la gestión de sesión y las funciones session_*().</li>
+				</ul>
+				</p>
+		 	</article>
+		</section>
+
+		<section>
+			<h2>HttpKernel</h2>
+			<article>				
+				<p class="left small">
+				Este se encarga de la parte dinámica de HTTP, es una capa en la parte superior de las clases Request y Response para estandarizar la forma en que se manejan las peticiones. <br/><br/> Proporciona tambien puntos de extensión y herramientas que lo convierten en el punto de partida para crear una plataforma Web sin demasiado trabajo y opcionalmente añade configurabilidad y extensibilidad, gracias al componente de inyección de dependencias.
+				</p>
+		 	</article>
+		</section>
+
+		<section>
+			<h2>Por que utilizar un Framework</h2>
+			<article>				
+				<p class="left small">
+				Consruye tus aplicaciones no tus herramientas .
+				Este es el principio básico de un todo framework: no tener que reinventar la rueda. Y la eliminación de malas practicas y tareas de bajo valor agregado (por ejemplo, el desarrollo de componentes genéricos con el fin de centrarse totalmente en las reglas de negocio.
+
+				<ul>
+					<li class="left small">Un framework no es una necesidad absoluta, pero sin embargo es muy útil.</li>
+					<li class="left small">Un framework es una garantía de calidad, capacidad de actualización y mantenimiento de aplicaciones a un costo menor.</li>
+					<li class="left small">Las aplicaciones desarrolladas utilizando un framework cumplen con de los estándares del mercado.</li>
+				</p>
+		 	</article>
+		</section>
+
+
+
+		<section>	
+			<h2 class="medium"> Referencias </h2>
+			<article>				
+				<p class="left small">
+					Drupal.org<br/>
+					WSCCI<br/>
+					Symfony.com<br/>
+					Symfony.es<br/>
+				</p>
+				<p class="left small ">
+					Slides hechas con kinout<br/>
+					<a href="https://github.com/soyjavi/kinout">kinout on github</a>
+				</p>
+				<p class="left small ">
+					Tipografías utlizadas Bitter & Open Sans<br/>
+					<a href="http://www.google.com/webfonts/specimen/Bitter">Open Sans en google webfont directory</a><br/>
+					<a href="http://www.google.com/webfonts/specimen/Open+Sans">Bitter en google webfont directory</a><br/>
+				</p>
+				</p>
+			</article>
+		</section>
+
+		<section>
+			<h2 class="medium"> Agradeciomientos </h2>
+			<article>
+				<h3>Gracias</h3>
+				<p class="vertical">
+					<img src="assets/images/real-me-blog.jpg" class="bordered center image-shadow">
+				</p>
+				<p>Drupal Camp, Costa Rica 2012</p>
+				<p class="vertical">Jesús Manuel Olivas | @jmolivas | http://jmolivas.com</p>
+			</article>
+		</section>	
+
+	</div>
+
+	<script src="kinout/javascripts/Kinout.js"></script>
+	<script src="kinout/javascripts/Kinout.Core.js"></script>
+	<script src="kinout/javascripts/Kinout.Dom.js"></script>
+	<script src="kinout/javascripts/Kinout.Router.js"></script>
+	<script src="kinout/javascripts/Kinout.Events.js"></script>
+	<script src="kinout/javascripts/Kinout.Url.js"></script>
+	<script src="kinout/javascripts/Kinout.View.js"></script>
+
+	<script>
+		KINOUT.Core.init({ template: 'circle' });
+	</script>
+</body>
+</html>
