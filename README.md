@@ -1,7 +1,7 @@
 ##Display Suite
 
 #Slides para charla 
-	--Diseño responsivo
+	--Drupal8 y Symfony2
  	--Drupal Camp, Costa Rica 2012
 
 
